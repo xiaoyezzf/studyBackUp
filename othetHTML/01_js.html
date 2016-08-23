@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> 价格 </title>
+</head>
+<body>
+	<script>
+	var x = window.prompt("请输入游戏机的价格:")
+	var y = window.prompt("请输入mp3的价格:")
+
+	var game_num = 5;
+	var mp3_num = 13;
+	var person_num = 30;
+
+	var total_money = game_num * x + mp3_num*y;
+	document.write("总价格为 = " + total_money);
+	var averag = total_money / person_num;
+	document.write("<br>总价格为 = " + averag.toFixed(2));
+</script>
+</body>
+
+
+</html>
