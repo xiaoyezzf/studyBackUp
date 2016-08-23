@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景样式</title>
+	<style>
+		body{
+			text-align: center;
+			height: 3000px;
+			background-color:orange;
+			background-image:url(fr.jpg);
+			background-repeat: no-repeat;
+			background-position:right top;
+
+
+		}
+		.bg{
+			width: 200px;
+			height: 80px;
+			border:1px solid blue;
+			background-image: url(fr.jpg);
+			background-position: -180px -310px;
+		}
+		.bg-link{
+			width: 1000px;
+			height: 1000px;
+			background:blue url(fr.jpg)  fixed repeat-x center center;
+		}
+	</style>
+</head>
+<body>
+	这是一只猫
+
+
+	<div class="bg"></div>
+
+	<div class="bg-link">
+
+	</div>
+</body>
+</html>

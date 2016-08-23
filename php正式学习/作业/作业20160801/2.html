@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位</title>
+	<style type="text/css">
+		.one{
+			width: 200px;
+			height: 200px;
+			background: red;
+			position:absolute; 
+			left:50px;
+			top:100px;
+			float: left;
+			z-index:10;
+		}
+		.two{
+			width: 200px;
+			height: 200px;
+			background: green;
+			float: left;
+			position: relative;
+			z-index: 11;
+		}
+		
+
+		.three{
+			width: 600px;
+			height: 600px;
+			background: aqua;
+			margin: 0 auto;
+			position: relative;
+		}
+		.four{
+			width: 300px;
+			height: 300px;
+			background: #000;
+		
+		}
+
+		.five{
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			position: absolute;
+			right:50px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="one"></div>
+	<div class="two"></div>
+	<div style="clear:both"></div>
+	<hr>
+	<div class="three">
+		<div class="four">
+			<div class="five">
+
+			</div>
+		</div>
+	</div> 
+</body>
+</html>
+

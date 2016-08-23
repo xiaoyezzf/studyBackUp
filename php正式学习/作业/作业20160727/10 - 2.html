@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>选择器的优先级</title>
+	<style type="text/css">
+		
+
+		
+		.p1{
+			color:silver;
+		}
+
+		.p2{
+			color:gold;
+		}
+
+		ul .li p{
+			color:firebrick;
+		}
+
+		ul li p{
+			color:pink;
+		}
+		p{
+			color:blue;
+			font-size: 30px;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<p>就是一个p</p>
+	<p class="p1 p2">这里是P1</p>
+	<p class="p2 p1">这里是P2</p>
+
+	<ul>
+		<li class="li">
+			<p style="color:orange">这里是UL里面的li类里面的p</p>
+		</li>
+		<li>
+			<p>这是一个段落</p>
+		</li>
+	</ul>
+
+</body>
+</html>

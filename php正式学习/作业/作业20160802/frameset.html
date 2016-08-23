@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frameset</title>
+</head>
+<frameset rows="100,*,100" border="5">
+    <frame src="1.html" name="one" frameborder="0" noresize="noresize"/>
+
+    <frameset cols="200,*">
+        <frame src="2.html" name="two" frameborder="0" noresize="noresize"/>
+        <frame src="4.html" name="four" frameborder="0" noresize="noresize"/>
+    </frameset>
+
+    <frame src="3.html" name="there" frameborder="0" noresize="noresize"/>
+</frameset>
+<body>
+<noframes>
+    不支持
+</noframes>
+</body>
+</html>

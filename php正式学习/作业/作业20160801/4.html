@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素透明</title>
+	
+	<style type="text/css">
+		.content{
+			height: 442px;
+			width: 300px;
+			position: relative;
+		}
+		.content img{
+			width: 300px;
+			height: 442px;
+		}
+		.content:hover .alpha,.content:hover .title{
+			display: block;
+		}
+		.alpha{
+			width: 300px;
+			height: 442px;
+			background: #000;
+			opacity:0.7;
+			filter:alpha(opacity=70);
+			position: absolute;
+			bottom: 0;
+			display: none;
+		}
+		.title{
+			color:#fff;
+			font-size: 18px;
+			width:220px;
+			border:2px solid red;
+			font-weight: bold;
+			border-radius: 5px;
+			padding:10px;
+			height: 30px;
+			line-height: 30px;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-top:-27px;
+			margin-left: -122px;
+			display: none;
+		}
+		
+
+	</style>
+
+</head>
+<body>
+	<div class="content">
+		<img src="1.jpg">
+		<div class="alpha"></div>
+		<div class="title">Fighting</div>
+	</div>
+	
+</body>
+</html>

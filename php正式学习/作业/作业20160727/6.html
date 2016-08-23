@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>后代/子代选择器</title>
+	<style type="text/css">
+
+		ul .pp{
+			color:red;
+			font-size: 30px;
+		}
+		
+		ul>.one>.pp{
+			color:blue;
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>		
+	<ul>
+		<li class="one">
+			<p class="pp">这是一个段落</p>
+		</li>
+		<li>
+			无序列表中的一项
+		</li>
+	</ul>
+	
+	<ul>
+		<li>
+			<p class="pp">另一个段落</p>
+		</li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器</title>
+	<style type="text/css">
+		a:link{
+			color:red;
+			font-size: 30px;
+			text-decoration: none;
+			border:1px solid black;
+			padding: 10px;
+
+		}
+		a:visited{
+			color:gray;
+			border:1px solid darkcyan;
+			padding: 10px;
+		}
+		a:hover{
+			font-size: 60px;
+		}
+		tr:hover{
+			background: green;
+		}
+		td:hover{
+			background: red;
+		}
+		td:active{
+			background: darkblue;
+		}
+
+		.input-text:focus{
+			width: 200px;
+			height: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<a href="http://www.baidu.com">连接到百度</a>
+	<p>
+		<input type="text" name="user" class="input-text">
+	</p>
+	
+	<table width="600" height="500" border="1" cellspacing="0" align="center">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

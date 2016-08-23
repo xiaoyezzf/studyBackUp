@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>伪元素选择器</title>
+	<style type="text/css">
+		h2:before{
+			content: '--鹅';
+			color:red;
+		}
+		h2:after{
+			content: '鹅--';
+			color:green;
+		}
+		p:first-letter{
+			color:blue;
+			font-size: 50px;
+		}
+		p:first-line{
+			color:yellow;
+			font-size: 30px;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<h2>鹅</h2>
+	<p>
+		门前大桥下!<br>
+		有过一群鸭!
+		快来快来数一数!
+		曲项向天歌!
+	</p>
+
+</body>
+</html>
