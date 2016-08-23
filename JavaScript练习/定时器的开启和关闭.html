@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>定时器的开启和关闭</title>
+    <script>
+        window.onload=function () {
+            var fstart = document.getElementById("btnstart");
+            var fstop = document.getElementById("btnstop");
+            var timer = null;
+
+            fstart.onclick=function () {
+                timer = setInterval(function () {
+                    alert("1111")
+                },1000)
+            }
+
+            fstop.onclick=function () {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btnstart">开启</button>
+<button id="btnstop">关闭</button>
+</body>
+</html>

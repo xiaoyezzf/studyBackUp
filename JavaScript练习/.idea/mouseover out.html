@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseover out</title>
+</head>
+<script>
+//    function mOver(gg) {
+//        gg.innerHTML="xx";
+//    }
+//    function mOut(hh) {
+//        hh.innerHTML="把鼠标移到上面";
+//    }
+
+
+    function mOver() {
+        document.getElementById("demo").innerHTML="ssss";
+    }
+    function mOut() {
+        document.getElementById("demo").innerHTML="把鼠标移到上面";
+    }
+</script>
+<body>
+<!--<div onmousemove="mOver(this)" onmouseout="mOut(this)"-->
+     <!--style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">-->
+    <!--把鼠标移到上面-->
+<!--</div>-->
+
+
+<div onmousemove="mOver()" onmouseout="mOut()" id="demo"
+           style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">
+    把鼠标移到上面
+</div>
+</body>
+</html>

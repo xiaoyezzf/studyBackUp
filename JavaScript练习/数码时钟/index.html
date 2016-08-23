@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数码时钟</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+
+        //时分秒只有一位数是前面补零
+        function  toDouble(n)
+        {
+            if(n<10)
+            {
+                return '0'+n;
+            }
+            else
+            {
+                return ''+n;
+            }
+        }
+
+        window.onload = function()
+        {
+            var myImg = document.getElementsByTagName("img");
+            function tick() {
+                var myDate = new Date();
+//            alert(myDate);
+                //获取时分秒
+                var str = toDouble(myDate.getHours()) +
+                        toDouble(myDate.getMinutes()) +
+                        toDouble(myDate.getSeconds());
+//            alert(str);
+                //改变图片的src
+                for(var i = 0;i<myImg.length;i++)
+                {
+                    myImg[i].src='img/00'+str.charAt(i)+'.png';
+                }
+            }
+            setInterval(tick,1000);
+            tick();
+
+        }
+    </script>
+</head>
+<body>
+<img class="img1" src="img/000.png" alt="">
+<img class="img1" src="img/000.png" alt="">
+<b class="b1">:</b>
+<img class="img1" src="img/000.png" alt="">
+<img class="img1" src="img/000.png" alt="">
+<b class="b1">:</b>
+<img class="img1" src="img/000.png" alt="">
+<img class="img1" src="img/000.png" alt="">
+
+</body>
+</html>

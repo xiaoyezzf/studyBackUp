@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>javascript</title>
+
+  <script>
+
+  function btnclick(){
+  alert("hello word!");
+  }
+
+  function change(){
+      var a=document.getElementById('chart1div').style.width;
+	  var b=parseInt(a);
+
+	  if(b>=100)
+	  {
+		  document.getElementById('chart1div').style.width=b-100;
+	  }
+  }
+
+
+
+
+  </script>
+
+  <style>
+
+  
+  #chart1div{
+      width:800px;
+	  height:800px;
+	  background:green;
+  }
+  </style>
+ </head>
+ <body>
+
+ <button onclick="btnclick()">ssssss</button>
+
+ <div id="chart1div">
+     <input type="button" id="Button1" onclick="change()">11111
+ </div>
+  
+ </body>
+</html>
