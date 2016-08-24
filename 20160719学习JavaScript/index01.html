@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #0099FF;
+        }
+    </style>
+</head>
+<body>
+<div class="div1" id="id1">1111</div>
+<br>
+<div class="div1" id="id2"></div>
+
+</body>
+<script>
+    var mychar = document.getElementsByClassName("div1");
+    console.log("my", mychar);
+    mychar[0].style.backgroundColor = "yellow";
+    mychar[0].innerHTML = "22222";
+    mychar[0].style.padding = "30px";
+
+</script>
+</html>
