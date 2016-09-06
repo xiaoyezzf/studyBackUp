@@ -1,0 +1,212 @@
+1.鼠标放上去显示某个层，鼠标移开隐藏层，参考126的登录的地方 http://mail.126.com/
+练习：在页面上显示一个登录按钮，点击登录按钮弹出登录框，登录框上面有一个关闭按钮，点击关闭按钮的时候可以关闭登录框
+
+<style type="text/css">
+        #div1{width:200px; height: 100px; background: #ccc; border: 1px solid; display: none}
+    </style>
+
+<input type="checkbox" onmouseover="document.getElementById('div1').style.display='block';" onmouseout="document.getElementById('div1').style.display='none';">
+    <div id="div1">
+        为了您的信息安全。。。。
+    </div>
+
+2.改变元素的样式，放上去放大，移开缩小
+
+<style type="text/css">
+        #div1{width:200px; height: 100px; background: red;}
+    </style>
+    <script type="text/javascript">
+        function toGreen(){
+            document.getElementById('div1').style.width='300px';
+            document.getElementById('div1').style.height='300px';
+        }
+        function toRed(){
+            document.getElementById('div1').style.width='200px';
+            document.getElementById('div1').style.height='200px';
+        }
+    </script>
+    <div id="div1" onmouseover="toGreen()" onmouseout="toRed()" >
+
+3.换肤功能  https://www.hao123.com/
+
+<link id="l1" rel="stylesheet" type="text/css" href="css1.css">
+    <script type="text/javascript">
+        function skin1(){
+            var l1 = document.getElementById('l1');
+            l1.href='css1.css';
+        }
+        function skin2(){
+            var l1 = document.getElementById('l1');
+            l1.href='css2.css';
+        }
+    </script>
+    <input type="button" value="皮肤1" onclick="skin1()">
+    <input type="button" value="皮肤2" onclick="skin2()">
+
+4.打印九九乘法表
+
+<script type="text/javascript">
+    for (var i =1; i <10; i++) {
+        for (var j = 1; j<=i; j++) {
+            document.write(j + '*' + i + '=' + i*j + '  ');
+        }
+        document.write('<br />');
+    }
+</script>
+
+5.弹出登录框 https://www.baidu.com/
+
+<style type="text/css">
+        #login{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            background: #ccc;
+            display: none;
+        }
+    </style>
+<input type="button" value="登录" onclick="show()">
+    <div id="login">
+        <input type="button" value="关闭" onclick="hide()">
+    </div>
+    <script type="text/javascript">
+        function show() {
+            var loginDiv = document.getElementById('login');
+            loginDiv.style.display = 'block';
+        }
+        function hide() {
+            var loginDiv = document.getElementById('login');
+            loginDiv.style.display = 'none';
+        }
+    </script>
+
+6.变颜色，引入函数的传参
+
+<style type="text/css">
+        #div1{
+            width:200px;
+            height: 200px;
+        }
+    </style>
+<input type="button" value="变红" onclick="changeColor('red')">
+    <input type="button" value="变蓝" onclick="changeColor('blue')">
+    <input type="button" value="变绿" onclick="changeColor('green')">
+
+    <div id="div1">
+    </div>
+    <script type="text/javascript">
+        function changeColor(color) {
+            var loginDiv = document.getElementById('div1');
+            loginDiv.style.background = color;
+        }
+    </script>
+
+7.可以修改任意的样式,变宽，变高，变红
+
+<style type="text/css">
+        #div1{
+            width:200px;
+            height: 200px;
+            background: #ccc;
+        }
+    </style>
+<input type="button" value="变宽" onclick="changeStyle('width', '300px')">
+    <input type="button" value="变高" onclick="changeStyle('height', '300px')">
+    <input type="button" value="变红" onclick="changeStyle('background', 'red')">
+
+    <div id="div1">
+    </div>
+    <script type="text/javascript">
+        function changeStyle(name, value) {
+            var loginDiv = document.getElementById('div1');
+            loginDiv.style[name]= value;
+        }
+    </script>
+
+8.全选，全不选，反选
+
+<script type="text/javascript">
+        window.onload=function(){
+            var CheckAll=document.getElementById('All');
+            var UnCheck=document.getElementById('uncheck');
+            var OtherCheck=document.getElementById('othercheck');
+            var div=document.getElementById('div');
+            var    CheckBox=div.getElementsByTagName('input');
+            CheckAll.onclick=function(){
+                    for(i=0;i<CheckBox.length;i++){
+                            CheckBox[i].checked=true;
+                        };
+                };
+            UnCheck.onclick=function(){
+                    for(i=0;i<CheckBox.length;i++){
+                            CheckBox[i].checked=false;
+                        };
+                };
+            othercheck.onclick=function(){
+                for(i=0;i<CheckBox.length;i++){
+                        if(CheckBox[i].checked==true){
+                                CheckBox[i].checked=false;
+                            }
+                        else{
+                            CheckBox[i].checked=true
+                            }
+
+                    };
+            };
+        };
+    </script>
+
+    全选：<input type="button" id="All" value="全选" /><br />
+不选<input type="button" id="uncheck" value="不选" /><br />
+反选<input type="button" id="othercheck" value="反选" /><br />
+<div id="div">
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+    <input type="checkbox" /><br />
+</div>
+
+9.给部分元素设置值
+
+<style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 10px;
+            margin-top:10px;
+            background: #ccc;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var div = document.getElementsByTagName('div');
+            for (var i=0; i<4; i++) {
+                div[i].style.background = 'red';
+            }
+        }
+    </script>
+<div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
